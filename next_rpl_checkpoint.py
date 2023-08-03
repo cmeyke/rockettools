@@ -11,14 +11,17 @@ RPL_CHECKPOINT_BLOCKS = 5760
 def main():
     with networks.ethereum.mainnet.use_provider("infura"):
         rocket_storage = Contract(ROCKET_STORAGE_ADDRESS)
+
         rocket_network_prices_abi = api.providers.Web3.solidity_keccak(
             ["string", "string"], ["contract.address", "rocketNetworkPrices"]
         )
         rocket_network_prices = Contract(
             rocket_storage.getAddress(rocket_network_prices_abi)
         )
+
         rpl_price = rocket_network_prices.getRPLPrice() / 10**18
         print(f"Current RPL checkpoint price: {rpl_price:.6f} ETH")
+
         blocks_until_next_price_update = RPL_CHECKPOINT_BLOCKS - (
             chain.blocks.height - rocket_network_prices.getPricesBlock()
         )
@@ -29,6 +32,7 @@ def main():
             blocks_until_next_price_update * ETH_SECONDS_PER_BLOCK / 60
             - hours_until_next_price_update * 60
         )
+
         print(
             f"Next price update in {blocks_until_next_price_update} blocks, or {hours_until_next_price_update} hours and {minutes_until_next_price_update} minutes"
         )
