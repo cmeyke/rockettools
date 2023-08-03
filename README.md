@@ -24,5 +24,5 @@ Sample output:
 
 ```
 Current RPL checkpoint price: 0.015766 ETH
-Next price update in 2708 blocks, or 9 hours and 1 minutes
+Next price update in 2708 blocks, or 9 hours and 1 minute
 ```

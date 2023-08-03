@@ -33,8 +33,12 @@ def main():
             - hours_until_next_price_update * 60
         )
 
+        if minutes_until_next_price_update == 1:
+            minutes = "minute"
+        else:
+            minutes = "minutes"
         print(
-            f"Next price update in {blocks_until_next_price_update} blocks, or {hours_until_next_price_update} hours and {minutes_until_next_price_update} minutes"
+            f"Next price update in {blocks_until_next_price_update} blocks, or {hours_until_next_price_update} hours and {minutes_until_next_price_update} {minutes}"
         )
 
 
