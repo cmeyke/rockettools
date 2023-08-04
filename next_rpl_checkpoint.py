@@ -7,12 +7,14 @@ ETH_SECONDS_PER_BLOCK = 12
 ROCKET_STORAGE_ADDRESS = "0x1d8f8f00cfa6758d7bE78336684788Fb0ee0Fa46"
 RPL_CHECKPOINT_BLOCKS = 5760
 
+Web3 = api.providers.Web3
+
 
 def main():
     with networks.ethereum.mainnet.use_provider("infura"):
         rocket_storage = Contract(ROCKET_STORAGE_ADDRESS)
 
-        rocket_network_prices_abi = api.providers.Web3.solidity_keccak(
+        rocket_network_prices_abi = Web3.solidity_keccak(
             ["string", "string"], ["contract.address", "rocketNetworkPrices"]
         )
         rocket_network_prices = Contract(
