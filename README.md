@@ -3,6 +3,9 @@
 Install following packages:
 
 ```
+python -m venv .venv
+source .venv/bin/activate
+
 pip install eth-ape
 pip install python-dotenv
 ```
