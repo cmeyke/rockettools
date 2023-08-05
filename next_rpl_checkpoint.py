@@ -1,4 +1,5 @@
-from ape import networks, api, Contract, chain
+from ape import networks, Contract, chain
+from web3 import Web3
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -6,8 +7,6 @@ load_dotenv()
 ETH_SECONDS_PER_BLOCK = 12
 ROCKET_STORAGE_ADDRESS = "0x1d8f8f00cfa6758d7bE78336684788Fb0ee0Fa46"
 RPL_CHECKPOINT_BLOCKS = 5760
-
-Web3 = api.providers.Web3
 
 
 def main():
