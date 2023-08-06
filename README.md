@@ -8,6 +8,7 @@ source .venv/bin/activate
 
 pip install eth-ape
 pip install python-dotenv
+ape plugins install infura etherscan
 ```
 
 Create .env file with the following variables:
