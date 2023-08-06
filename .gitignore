@@ -161,4 +161,4 @@ cython_debug/
 
 .build/
 .vscode/
-setenv
+.exportenv
