@@ -15,7 +15,7 @@ Create .env file with the following variables:
 
 ```
 PORTAL_ID="<your portal id: https://portal.pokt.network>"
-ETHERSCAN_TOKEN="your etherscan token: https://etherscan.io"
+ETHERSCAN_TOKEN="<your etherscan token: https://etherscan.io>"
 ```
 
 Run the following command:
