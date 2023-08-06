@@ -1,0 +1,4 @@
+geth:
+  ethereum:
+    mainnet:
+      uri: https://eth-mainnet.gateway.pokt.network/v1/lb/${PORTAL_ID}

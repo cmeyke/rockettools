@@ -8,14 +8,14 @@ source .venv/bin/activate
 
 pip install eth-ape
 pip install python-dotenv
-ape plugins install infura etherscan
+ape plugins install etherscan
 ```
 
 Create .env file with the following variables:
 
 ```
-WEB3_INFURA_PROJECT_ID
-ETHERSCAN_TOKEN
+PORTAL_ID="<your portal id: https://portal.pokt.network>"
+ETHERSCAN_TOKEN="your etherscan token: https://etherscan.io"
 ```
 
 Run the following command:

@@ -10,7 +10,7 @@ RPL_CHECKPOINT_BLOCKS = 5760
 
 
 def main():
-    with networks.ethereum.mainnet.use_provider("infura"):
+    with networks.ethereum.mainnet.use_provider("geth"):
         rocket_storage = Contract(ROCKET_STORAGE_ADDRESS)
 
         rocket_network_prices_abi = Web3.solidity_keccak(
